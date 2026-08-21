@@ -397,7 +397,8 @@ if 'analyses' not in st.session_state:
 if 'results' not in st.session_state:
     st.session_state.results = None
 
-API_URL = "http://localhost:8000"
+API_URL = os.environ.get('BACKEND_URL', 'http://localhost:8000')
+
 
 # ============================================================================
 # HEADER
